@@ -16,10 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^5.3.0",
     "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-typescript": "^14.0.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-config-wesbos": "2.1.0",
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -27,6 +24,31 @@
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.jsx?(x)"
+        ],
+        "rules": {
+          "max-len": "warn",
+          "react/function-component-definition": [
+            2,
+            {
+              "namedComponents": "arrow-function",
+              "unnamedComponents": "arrow-function"
+            }
+          ]
+        }
+      }
+    ],
+    "rules": {
+      "no-unused-vars": "warn"
+    }
   },
   "license": "MIT",
   "name": "demo-redux-toolkit",
