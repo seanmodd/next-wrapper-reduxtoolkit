@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import React from 'react';
-import { increment } from '../slices/counterSlice';
+import { increment } from '../slices/toolkitSliceAndApollo';
 
 function Increment() {
   const dispatch = useDispatch();
